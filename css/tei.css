@@ -1,0 +1,125 @@
+*{font-family: Helvetica;}
+tei-listPerson::before{
+  content:"List of mentioned persons:"
+}
+tei-listPerson {
+  list-style-type: disc;
+}
+tei-listPerson>tei-person {
+  display: list-item;
+  list-style-position: inside;
+}
+tei-birth::after{
+  content:"*";
+}
+tei-death::after{
+  content:"✞";
+}
+tei-idno::before{
+  content:"(ID: "
+}
+tei-idno::after{
+  content:")"
+}
+tei-listPerson::after{
+    content: "\a";
+    white-space: pre;
+}
+tei-listBibl::before{
+  content:"List of mentioned books:"
+}
+tei-listBibl {
+  list-style-type: circle;
+}
+tei-listBibl>tei-bibl {
+  display: list-item;
+  list-style-position: inside;
+}
+tei-bibl>tei-author::before {
+  content:"written by "
+}
+tei-bibl>tei-date::before {
+  content:"in "
+}
+tei-listBibl::after{
+    content: "\a";
+    white-space: pre;
+}
+tei-list::before{
+  content:"Explanation of terms:"
+}
+tei-list {
+  list-style-type: upper-latin;
+}
+tei-list>tei-item {
+  display: list-item;
+  list-style-position: inside;
+   text-indent: 2em
+}
+tei-term {font-style: italic;}
+tei-term::after{
+  content:": "
+}
+tei-list::after{
+    content: "\a";
+    white-space: pre;
+}
+tei-list[type=tracklist]{
+  list-style-type: none;
+}
+tei-body>tei-head {
+font-size: large;
+text-decoration: underline black;
+}
+tei-head{
+  text-decoration: underline black;
+}
+tei-head::before{
+    content: "\a";
+    white-space: pre;
+}
+tei-head::after{
+    content: "\a";
+    white-space: pre;
+}
+tei-note::after{
+  content: "\a";
+  white-space: pre;
+}
+tei-l{
+  margin-left: 20px;
+  font-style: italic;
+}
+tei-lg::before{
+  content: "\a";
+  white-space: pre;
+}
+tei-lg::after{
+  content: "\a";
+  white-space: pre;
+}
+tei-l::after{
+  content: "\a";
+  white-space: pre;
+}
+tei-lg[type=verse]::before{
+  content: "Verse:"
+}
+tei-lg[type=chorus]::before{
+  content: "Chorus:"
+}
+tei-lg[type=bridge]::before{
+  content: "Bridge:"
+}
+tei-lg[type=refrain]::before{
+  content: "Refrain:"
+}
+tei-lg[type=outro]::before{
+  content: "Outro:"
+}
+tei-lg[type=pre-chorus]::before{
+  content: "Pre-chorus:"
+}
+tei-lg[type=post-chorus]::before{
+  content: "Post-chorus:"
+}

@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding of songtexts from Tools Album "Lateralus" and their
+               interpretation</title>
+            <editor>Martin Kroissenbrunner</editor>
+         </titleStmt>
+         <extent>57 KB</extent>
+         <publicationStmt>
+            <p>The document was created for learning purposes, it is not intended for
+               publication!</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>The source of the lyrics is the website
+                  "<ref>https://toolband.com/releases/lateralus/</ref>". That of the interpretation
+               is "<ref>https://genius.com/Tool-lateralus-lyrics</ref>"</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>The album "Lateralus" by the band "Tool" is at the center of this project. The aim of
+               the final project in the course "X-Technologien I", is to encode the lyrics as well
+               as interpretations of this album.</p>
+         </projectDesc>
+         <samplingDecl>
+            <p>The following text consists of the lyrics and interpretations of these. In order to
+               work with the correct lyrics, the editor decided to get them from the band's official
+               website. Regarding the interpretations, the site "genius.com" was used. The site
+               allows users to provide annotations and interpretation to song lyrics, news stories,
+               sources, poetry, and documents. However, the interpretations were not adopted
+               one-to-one, but summarized as well as expanded by the editor´s point of view. The
+               structuring of the song texts in verse, chorus, etc. was also based on
+               "genius.com".</p>
+         </samplingDecl>
+         <editorialDecl>
+            <p/>
+            <correction>
+               <p>Obvious errors were marked as <gi>sic</gi>, however, a corrected version is not
+                  offered.</p>
+            </correction>
+            <p>The structure of the text looks like this: the <gi>div</gi>-elements contain the
+               total of 9 songs. The sections of the songs (verse, refrain, pre-chorus, etc.) are in
+               turn structured with <gi>lg</gi> elements. The <gi>l</gi> elements contain the
+               individual lines. The <gi>note</gi> elements refer either to individual lines or to
+               entire sections and contain the interpretations. Since the metric scheme of the song
+               "Lateralus" is important for the interpretation of the lyrics the <gi>met</gi>-
+               attribute is used here as an exception. Also persons, books or terms mentioned in the
+               lyrics are normalized and/or described in the <gi>standOff</gi>-Element. The focus is
+               on the lyrics, so musical features like key, tempo or tact won´t be mentioned. The
+               album consists of thirteen songs. If you look at the numbering, you will notice that
+               some songs are missing. That´s because the second, fourth and twelveth songs are
+               instrumental. The thirteenth song includes talking, that is from a radio call-in show
+               and therefore no work of the band.</p>
+         </editorialDecl>
+      </encodingDesc>
+   </teiHeader>
+   <standOff>
+      <listPerson>
+         <person xml:id="NaHa">
+            <persName>
+               <forename>Nathaniel</forename>
+               <surname>Hawthorne</surname>
+            </persName>
+            <birth>1804</birth>
+            <death>1864</death>
+            <idno type="VIAF">44435463</idno>
+         </person>
+         <person xml:id="MaJaKe">
+            <persName>
+               <forename>Maynard</forename>
+               <forename>James</forename>
+               <surname>Keenan</surname>
+            </persName>
+            <birth>1964</birth>
+            <idno type="VIAF">481149294285080521418</idno>
+         </person>
+         <person xml:id="JeChNa">
+            <persName>
+               <forename>Jesus</forename>
+               <forename>Christus</forename>
+               <nameLink>von</nameLink>
+               <placeName>Nazareth</placeName>
+            </persName>
+            <birth>4 v. Chr.</birth>
+            <death>29 n. Chr</death>
+            <idno type="VIAF">38323081</idno>
+         </person>
+         <person xml:id="CaJu">
+            <persName>
+               <forename>Carl</forename>
+               <forename>Gustav</forename>
+               <surname>Jung</surname>
+            </persName>
+            <birth>1875</birth>
+            <death>1961</death>
+            <idno type="VIAF">88819182</idno>
+         </person>
+      </listPerson>
+      <listBibl>
+         <bibl xml:id="ScLe">
+            <title>The Scarlet Letter</title>
+            <author>Nathaniel Hawthorne</author>
+            <date>1850</date>
+            <idno type="ISBN">978-1512090567</idno>
+         </bibl>
+         <bibl xml:id="NT">
+            <title>Neues Testament</title>
+            <idno type="VIAF">223078470</idno>
+         </bibl>
+      </listBibl>
+      <list>
+         <item xml:id="def_schism">
+            <term>Schism</term>
+            <gloss>When there is a schism, a group or organization divides into two groups as a
+               result of differences in thinking and beliefs.</gloss>
+            <cit type="example">
+               <quote>...the great schism which divided the Christian world in the 11th
+                  century.</quote>
+            </cit>
+         </item>
+         <item xml:id="def_tool">
+            <term>Tool</term>
+            <gloss>Tool is an American rock band from Los Angeles. Formed in 1990, the group's
+               line-up includes vocalist Maynard James Keenan, guitarist Adam Jones and drummer
+               Danny Carey. Justin Chancellor has been the band's bassist since 1995, replacing
+               their original bassist Paul D'Amour. Tool has won four Grammy Awards, performed
+               worldwide tours, and produced albums topping the charts in several countries.</gloss>
+            <idno type="VIAF">133634298</idno>
+         </item>
+         <item xml:id="def_lat">
+            <term>Lateralus</term>
+            <gloss>Lateralus (/ˌlætəˈræləs/)[2] is the third studio album by American rock band
+               Tool. It was released on May 15, 2001, through Volcano Entertainment. The album was
+               recorded at Cello Studios in Hollywood and The Hook, Big Empty Space, and The Lodge,
+               in North Hollywood, between October 2000 and January 2001.</gloss>
+         </item>
+         <item xml:id="def_apc">
+            <term>A Perfect Circle</term>
+            <gloss>A Perfect Circle is an American rock band formed in Los Angeles, California in
+               1999 by guitarist Billy Howerdel and Tool vocalist Maynard James Keenan.</gloss>
+            <idno type="VIAF">138599085</idno>
+         </item>
+         <item xml:id="def_HeQa">
+            <term>Hermetic Qabalah</term>
+            <gloss>Hermetic Qabalah (from Hebrew קַבָּלָה (qabalah) 'reception, accounting') is a
+               Western esoteric tradition involving mysticism and the occult.</gloss>
+         </item>
+         <item xml:id="def_Seph">
+            <term>Sephiroth</term>
+            <gloss>Sephiroth is the hebrew is the Hebrew term of the ten divine emanations in the
+               Kabbalistic Tree of Life.</gloss>
+         </item>
+         <item xml:id="def_VoEn">
+            <term>Volcano Entertainment</term>
+            <gloss>Volcano Entertainment (sometimes referred to as Volcano Records) was an American
+               all-round music record label founded in 1996.</gloss>
+            <idno type="VIAF">150299175</idno>
+         </item>
+         <item xml:id="def_FiSe">
+            <term>Fibonacci sequence</term>
+            <gloss>In mathematics, the Fibonacci numbers, form a sequence, the Fibonacci sequence,
+               in which each number is the sum of the two preceding ones. Starting from 0 and 1, the
+               next few values in the sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,
+               ...</gloss>
+         </item>
+      </list>
+   </standOff>
+   <text>
+      <front>
+         <p>The following is a text, containing the lyrics and it´s interpretation from <ref
+               target="#def_tool">Tool</ref>´s Album "<ref target="#def_lat">Lateralus</ref>". <ref
+               target="#def_lat">Lateralus</ref> is their third studio album. It was released on
+               <date when="2001-05-15">May 15, 2001</date>, through <ref target="#def_VoEn">Volcano
+               Entertainment</ref>. The album was recorded at Cello Studios in
+               <placeName>Hollywood</placeName> and The Hook, Big Empty Space, and The Lodge, in
+               <placeName>North Hollywood</placeName>, between <date>October 2000</date> and
+               <date>January 2001</date>. <persName>David Bottrill</persName>, who had produced the
+            band's two previous releases <name>Ænima</name> and <name>Salival</name>, produced the
+            album along with the band, and became the last <ref target="#def_tool">Tool</ref> album
+            produced by <persName>Bottrill</persName> to date. The tracklist looks as follows: <list
+               type="tracklist">
+               <item xml:id="lat_1">1."The Grudge"</item>
+               <item xml:id="lat_2">2. "Eon Blue Apocalypse" (instrumental)</item>
+               <item xml:id="lat_3">3. "The Patient"</item>
+               <item xml:id="lat_4">4. "Mantra" (instrumental)</item>
+               <item xml:id="lat_5">5. "Schism"</item>
+               <item xml:id="lat_6">6. "Parabol"</item>
+               <item xml:id="lat_7">7. "Parabola"</item>
+               <item xml:id="lat_8">8. "Ticks &amp; Leeches"</item>
+               <item xml:id="lat_9">9. "Lateralus"</item>
+               <item xml:id="lat_10">10. "Disposition"</item>
+               <item xml:id="lat_11">11. "Reflection"</item>
+               <item xml:id="lat_12">12. "Triad" (instrumental)</item>
+               <item xml:id="lat_13">13. "Faaip de Oiad"</item>
+            </list></p>
+      </front>
+      <body>
+         <head>Encoding of songtexts from Tools Album "Lateralus" and their interpretation</head>
+         <div type="song" n="1" corresp="#lat_1">
+            <head>1. The Grudge</head>
+            <note corresp="#lat_1">“The Grudge” is a song about maturity and development, using
+               alchemical, astrological, and mythological symbolism.</note>
+            <lg type="chorus" n="1.1." xml:id="grudge_chor1">
+               <l xml:id="line_1.1.1.">Wear your grudge like a crown of negativity.</l>
+               <l>Calculate what we will or will not tolerate.</l>
+               <l>Desperate to control all and everything.</l>
+               <l xml:id="line_1.1.4.">Unable to forgive your scarlet lettermen.</l>
+               <note corresp="#line_1.1.1.">A crown is a symbol of power, a source of authority, but
+                  also a burden of responsibility. Here, the grudge, being a feeling of resentment
+                  against perceived wrongdoers, acts as a “negative” crown which one chooses to
+                  wear. It is a symbol of power because it lets you feel hatred toward the
+                  transgressors, and of authority because it lets you stand separate from them. In
+                  the <ref target="#def_HeQa">Hermetic Qabalah</ref>, which alchemists and
+                  hermeticists connect with astrology and alchemy, the highest <ref
+                     target="#def_Seph">Sephiroth</ref> on the Tree of Life diagram is called
+                  Kether, which in Hebrew means “Crown.” Kether is directly connected to Binah
+                  (“Understanding”), which is attributed to Saturn.</note>
+               <note corresp="#line_1.1.4.">This line refers to the classic novel <name ref="#ScLe"
+                     >The Scarlet Letter</name> by <name ref="#NaHa">Nathaniel Hawthorne</name>,
+                  largely seen as symbolic or even allegorical. The main character Hester Prynne is
+                  an adulteress who is forced to wear a scarlet letter ‘A’ on her breast as
+                  punishment for committing adultery with Arthur Dimmesdale, Puritan minister and
+                  the father of her child, Pearl. Lettermens deliver messages. So the one who can´t
+                  forgive the scarlet lettermen is one who can´t forgive those who accuse him of
+                  something shameful</note>
+            </lg>
+            <lg type="verse" n="1.2." xml:id="grudge_vers1">
+               <l xml:id="line_1.2.1.">Clutch it like a cornerstone.</l>
+               <l xml:id="line_1.2.2.">Otherwise it all comes down.</l>
+               <l xml:id="line_1.2.3.">Justify denials and</l>
+               <l xml:id="line_1.2.4.">grip it to the lonesome end.</l>
+               <l>Clutch it like a cornerstone.</l>
+               <l>Otherwise it all comes down.</l>
+               <l>Terrified of being wrong.</l>
+               <l>Ultimatum prison cell.</l>
+               <note corresp="#line_1.2.1., #line_1.2.2.">The cornerstone is the first stone set in
+                  the construction of a masonry foundation and is important since all other stones
+                  will be set in reference to this stone, thus determining the position of the
+                  entire structure. The cornerstone metaphor serves a dual purpose; it depicts the
+                  titular grudge as a defining personal characteristic, holding everything in place,
+                  but it also suggests a burden to keep it aloft. Hence the later mention of an
+                  "ultimatum prison cell"</note>
+               <note corresp="#line_1.2.3., #line_1.2.4.">For the protagonist it is important to
+                  justify refusals and disapproval in order to evade their meaning. And so in fear
+                  of being offended he/she is afraid of bonding to his/her fellows.</note>
+            </lg>
+            <lg type="refrain" n="1.3." xml:id="grudge_ref1">
+               <l>Saturn ascends,</l>
+               <l xml:id="line_1.3.2.">choose one or ten.</l>
+               <l>Hang on or be</l>
+               <l>humbled again.</l>
+               <note corresp="#grudge_ref1">The refrain references to a astrological as well as to a
+                  mythological fact. In mythological sence speaking the Roman god Saturn is
+                  ascending by castrating and finally dispatching his father Caelus, the god of the
+                  sky and ruler of the universe (Uranus in Greek myth). The phrase “comes around
+                  again” references to the circumstance when Saturn is overthrown by his son
+                  Jupiter. It is the editors belief, that the mythological killing of ones father is
+                  the process of individuation. The figure of the father is the representation of
+                  the mind and culture(in contrast to the mother which is a symbol for the material
+                  world) and it is the duty of one to break free from his automated mind and stop
+                  reacting to the outside world in preconseived notions. Astrologically speaking
+                  every 29 years the planet Saturn arrives at the same place as when he was at ones
+                  birth. It is said, that the time around "Saturns return" - so around age 29, 58
+                  and 87 - is impactful for the individual for one starts to rethink embarked paths
+                  and become more mature. If one is not able to let go of the emotional tidal waves
+                  of pain, anger and frustration and order ones life more truthfully and less
+                  compulsive around that time, it will be hard for one to change that until the next
+                  29 years have passed. <note corresp="#line_1.3.2.">Choose one or ten is a
+                     reference to the Sephiroth of the Kabbalistic Tree of Life. One is Kether, the
+                     Crown, the first emanation from God, while ten is Malkuth, or Kingdom, the last
+                     Sephira and considered the lowest emanation.</note></note>
+            </lg>
+            <lg type="verse" n="1.4" xml:id="grudge_vers2">
+               <l>Clutch it like a cornerstone.</l>
+               <l>Otherwise it all comes down.</l>
+               <l>Justify denials and</l>
+               <l>grip it to the lonesome end.</l>
+            </lg>
+            <lg type="refrain" n="1.5." xml:id="grudge_ref2">
+               <l>Saturn ascends,</l>
+               <l>comes round again.</l>
+               <l>Saturn ascends</l>
+               <l>the one, the ten.</l>
+               <l>Ignorant to the damage done.</l>
+            </lg>
+            <lg type="chorus" n="1.6." sameAs="#grudge_chor1">
+               <l>Wear your grudge like a crown of negativity.</l>
+               <l>Calculate what you will or will not tolerate.</l>
+               <l>Desperate to control all and everything.</l>
+               <l>Unable to forgive your scarlet lettermen.</l>
+            </lg>
+            <lg type="verse" n="1.7." xml:id="grudge_vers3">
+               <l>Wear the grudge like a crown.</l>
+               <l>Desperate to control.</l>
+               <l>Unable to forgive.</l>
+               <l>And we're sinking deeper.</l>
+               <l>Defining, confining, sinking deeper.</l>
+               <l>Controlling, defining,</l>
+               <l>and we're sinking deeper.</l>
+            </lg>
+            <lg type="chorus" n="1.8." xml:id="grudge_chor2">
+               <l>Saturn comes back around to show you everything</l>
+               <l>Let's you choose what you will not see and then</l>
+               <l>Drags you down like a stone or lifts you up again</l>
+               <l xml:id="line_1.8.4.">Spits you out like a child, light and innocent.</l>
+               <note corresp="#grudge_chor2">The metaphor is about Saturn (a symbol of time and
+                  maturity) giving perspective to either lift you up as you choose to forgive
+                  yourself and those who raised you for the way you were raised in your early life,
+                  or letting that reality drag you down to a lower state of blame, resentment, and
+                  anger.</note>
+               <note corresp="#line_1.8.4.">In a Roman myth, upon learning that one of his sons
+                  would excel him, Saturn begins to eat his children. Opis, a fertility goddess and
+                  Jupiter’s mother, swaddles a stone in Jupiter’s place and Saturn ends up eating it
+                  instead.</note>
+            </lg>
+            <lg type="bridge" n="1.9." xml:id="grudge_bridge">
+               <l>Saturn comes back around.</l>
+               <l>Lifts you up like a child or</l>
+               <l>Drags you down like a stone to</l>
+               <l>Consume you till you</l>
+               <l>choose to let this go.</l>
+               <l>Choose to let this go.</l>
+            </lg>
+            <lg type="verse" n="1.10." xml:id="grudge_vers4">
+               <l>Give away the stone.</l>
+               <l>Let the oceans take and transmutate</l>
+               <l>this cold and fated anchor.</l>
+               <l>Give away the stone.</l>
+               <l xml:id="line_1.10.5.">Let the waters kiss and transmutate</l>
+               <l xml:id="line_1.10.6.">these leaden grudges into gold.</l>
+               <note corresp="#line_1.10.5., #line_1.10.6.">Alchemy is, superficially, the attempt
+                  to transmute lead into gold – lead being a dull, heavy, and even harmful metal,
+                  and gold superconductive, beautiful and valuable. Underneath the symbol, however,
+                  the Swiss psychologist <name ref="#CaJu">Carl Jung</name> saw within a symbolic
+                  process that he used to create his system of psychological development called
+                  individuation. It is the process by which an individual conscious self develops
+                  out of undifferentiated consciousness. In alchemy, Saturn’s metal is lead, while
+                  gold is attributed to the Sun.</note>
+            </lg>
+            <lg type="outro" n="1.11." xml:id="grudge_outro">
+               <l>Let go.</l>
+               <note corresp="#grudge_outro">The final line of the song adds clarity to the rest of
+                  the lyrics: it tells the grudge holder to forgive and let go. This sentiment is
+                  repeated again in <name ref="#lat_3">schism</name>.</note>
+            </lg>
+         </div>
+         <div type="song" n="3" corresp="#lat_3">
+            <head>3. The Patient</head>
+            <note corresp="#lat_3">This song is written from the perspective of the singer’s mother.
+               She has been paralyzed since <date>1976</date>. In this song we see his mother
+               battling not only with herself, her illness and the way it affects the ones she loves
+               (referred to in the beginning as <ref target="#line_3.1.2.">"the fearful"</ref>) but
+               also her faith. <ref target="#line_3.1.3.">In the song there are multiple instances
+                  where she questions what’s happening to her and God’s masterplan and how it can be
+                  that this is the path that was chosen for her.</ref>
+            </note>
+            <lg type="verse" n="3.1." xml:id="thepat_vers1">
+               <l>A groan of tedium escapes me,</l>
+               <l xml:id="line_3.1.2.">startling the fearful.</l>
+               <l xml:id="line_3.1.3.">Is this a test? It has to be.</l>
+               <l>Otherwise I can't go on.</l>
+               <l>Draining patience. drain vitality.</l>
+               <l>this paranoid, paralyzed vampire act's a little old.</l>
+            </lg>
+            <lg type="verse" n="3.2." xml:id="thepat_vers2">
+               <l>But I'm still right here,</l>
+               <l>giving blood and keeping faith.</l>
+               <l>And I'm still right here.</l>
+               <l>But I'm still right here,</l>
+               <l>giving blood and keeping faith.</l>
+               <l>And I'm still right here.</l>
+            </lg>
+            <lg type="pre-chorus" n="3.3." xml:id="thepat_prechor">
+               <l>I'm gonna wait it out</l>
+            </lg>
+            <lg type="chorus" n="3.4." xml:id="thepat_chor1">
+               <l>If there were no rewards to reap,</l>
+               <l>no loving embrace to see me through</l>
+               <l>this tedious path I've chosen here,</l>
+               <l>I certainly would've walked away by now.</l>
+               <l>I'm gonna wait it out</l>
+            </lg>
+            <lg type="chorus" n="3.5." xml:id="thepat_chor2">
+               <l>If there were no desire to heal</l>
+               <l>The damaged and broken met along</l>
+               <l>this tedious path I've chosen here,</l>
+               <l>I certainly would've walked away by now.</l>
+            </lg>
+            <lg type="bridge" n="3.6." xml:id="thepat_bridge">
+               <l>I still may.</l>
+               <l>And I still may.</l>
+               <l>Be patient.</l>
+               <l>I must keep reminding myself of this...</l>
+            </lg>
+            <lg type="chorus" n="3.7." xml:id="thepat_chor3">
+               <l>If there were no rewards to reap,</l>
+               <l>no loving embrace to see me through</l>
+               <l>this tedious path I've chosen here,</l>
+               <l>I certainly would've walked away by now.</l>
+            </lg>
+            <lg type="outro" n="3.8." xml:id="thepat_outro">
+               <l>And I still may.</l>
+               <l>And I still may.</l>
+               <l>And I still may.</l>
+               <l>I'm gonna wait it out.</l>
+               <l>I'm gonna wait it out.</l>
+               <l>Gonna wait it out.</l>
+               <l>Gonna wait it out.</l>
+            </lg>
+         </div>
+         <div type="song" n="5" corresp="#lat_5">
+            <head>5. Schism</head>
+            <note corresp="#lat_5">In this song, lead singer <ref target="#MaJaKe">Maynard James
+                  Keenan</ref> describes the effect a <ref target="#def_schism">“schism”</ref> can
+               have on a relationship when the parties disagree and communications break down. This
+               song and all of <ref target="#def_lat">Lateralus</ref> came after some rough legal
+               issues with record labels and the success of Maynard’s other band, <ref
+                  target="#def_apc">A Perfect Circle</ref>, which had just started to require a lot
+               more of his time. This song is Tool’s “Come Together” in that it is there way of
+               letting fans and even themselves know that even if there have been hardships they can
+               still fit together and create greatness. He uses a jigsaw puzzle as a metaphor for
+               the relationship.On the album the song is introduced by the interlude “<ref
+                  target="#lat_4">Mantra</ref>.” The interlude is included in the <ref
+                  target="https://www.youtube.com/watch?v=UhjG47gtMCo">music video</ref> .</note>
+            <lg type="verse" n="5.1." xml:id="schism_vers1">
+               <l>I know the pieces fit</l>
+               <l>cuz I watched them fall away</l>
+               <l>mildewed and smoldering,</l>
+               <l>fundamental differing,</l>
+               <l>pure intention juxtaposed</l>
+               <l>will set two lovers souls in motion</l>
+               <l>disintegrating as it goes</l>
+               <l>testing our communication</l>
+               <note corresp="#schism_vers1">The relationship once with integrity (like a jigsaw
+                  puzzle put together) is now falling apart. But it can be reassembled again, since
+                  the pieces were together at some point. If the two parties are able to integrate
+                  their different beliefs, they could save the relationship</note>
+            </lg>
+            <lg type="bridge" n="5.2." xml:id="schism_bridge1">
+               <l>the light that fueled our fire then</l>
+               <l>has burned a hole between us so</l>
+               <l>we cannot <sic>see</sic> to reach an end</l>
+               <l>crippling our communication.</l>
+               <note corresp="#schism_bridge1">The same passion that brought the two together now
+                  fans the flames of their bitterness. Also the fighting never stops. One fight
+                  leads to another, and there is no stepping back to let things calm down. Instead
+                  of communication there is only fighting.</note>
+            </lg>
+            <lg type="verse" n="5.3." xml:id="schism_vers2">
+               <l>I know the pieces fit</l>
+               <l>cuz I watched them tumble down</l>
+               <l xml:id="line_5.3.3.">no fault, none to blame</l>
+               <l xml:id="line_5.3.4.">it doesn't mean I don't desire</l>
+               <l xml:id="line_5.3.5.">to point the finger, blame the other,</l>
+               <l xml:id="line_5.3.6.">watch the temple topple over.</l>
+               <l>To bring the pieces back together,</l>
+               <l>rediscover communication.</l>
+               <note corresp="#line_5.3.3., #line_5.3.4., #line_5.3.5.">There is no fault because
+                  both are fighting for something they believe in. Despite this fact,or maybe
+                  because of the purity of his intentions, he still feels the desire to lay all of
+                  the blame at the others feet. Ignoring that they are coming from an equal
+                  place.</note>
+               <note corresp="#line_5.3.6."> This line refers to the cleansing of the Temple
+                  narrative, which tells of <ref target="#JeChNa">Jesus</ref> expelling the
+                  merchants and the money changers from the Temple. It is recounted in all four
+                  canonical gospels of the <ref target="#NT">New Testament</ref>. The temple is a
+                  synonym for the relationship. Both can serve for holy purposes. But if the
+                  intentions become distorted, the profane will rush in.</note>
+            </lg>
+            <lg type="bridge" n="5.4." xml:id="schism_bridge2">
+               <l>The poetry that comes from the squaring off between,</l>
+               <l>And the circling is worth it.</l>
+               <l>Finding beauty in the dissonance.</l>
+               <note corresp="#schism_bridge2">The author compares their struggles to a boxing match
+                  (squaring off, circling), and is finding beauty in the passion of their fighting
+                  (beauty in dissonance).</note>
+            </lg>
+            <lg type="verse" n="5.5." xml:id="schism_vers3">
+               <l>There was a time that the pieces fit,</l>
+               <l>but I watched them fall away.</l>
+               <l>Mildewed and smoldering,</l>
+               <l xml:id="line_5.5.4.">strangled by our coveting</l>
+               <l xml:id="line_5.5.5.">I've done the <sic>the</sic> math enough to know</l>
+               <l xml:id="line_5.5.6.">the dangers of a second guessing</l>
+               <l>Doomed to crumble unless we grow,</l>
+               <l>and strengthen our communication</l>
+            </lg>
+            <note corresp="#line_5.5.4., #line_5.5.5., #line_5.5.6.">To covet means to desire. So
+               the relationship gets "strangled" by desire - either of another person, or of being
+               right. The protagonist knows that this is very dangerous to the relationship. By
+               wanting someone else, they are second guessing their decision to be in an exclusive
+               relationship.</note>
+            <lg type="bridge" n="5.6." xml:id="schism_bridge3">
+               <l xml:id="line_5.6.1.">cold silence has a tendency to</l>
+               <l xml:id="line_5.6.2.">atrophy any sense of compassion</l>
+               <l xml:id="line_5.6.3.">between supposed lovers</l>
+               <l xml:id="line_5.6.4.">between supposed brothers.</l>
+            </lg>
+            <note corresp="#line_5.6.1., #line_5.6.2.">The theme of passive aggressive behavior runs
+               through this song like a river. Being passive-aggressive is destructive behavior and
+               these two lines attempt to clarify that. The sentiment is quite universal, but the
+               words that the songwriters chose here are what communicates the weight of the
+               meaning. Cold silence is more than just refusing to talk to each other; it is a
+               deeply rooted commitment to avoid communication. It starts as a seed, a slight or
+               offense, and grows as it’s fed with negativity and a steadfast refusal to yield or
+               tolerate. Also, consider the use of the word “atrophy”. For a living organism, to
+               have a part atrophy is more than just to get sore from not moving during an extended
+               binge of a show or video game. The atrophy of something takes time and is defined as
+               “arrested development or loss of a part or organ incidental to the normal development
+               or life of an animal or plant”. Atrophy is the literal wasting away of a part of you
+               because it is not being used. In this setting, the wasting away of one’s sense of
+               compassion because you just can’t find a way to overcome your disagreement.</note>
+            <note corresp="#line_5.6.3., #line_5.6.4.">The word supposed is important here. By title
+               they are lovers but with all of the fighting and the breakdown in communication it no
+               longer feels so. By using “supposed” he illustrates how the breakdown of the
+               relationship has strained their bond, and that the way they treat each other isn’t
+               how two lovers treat their significant other.</note>
+            <lg type="outro" n="5.7." xml:id="schism_outro">
+               <l>And I know the pieces fit.</l>
+            </lg>
+            <note corresp="#schism_outro">Reading the text one might have the impression that the
+               protagonist matured enough to let go of his resentment - as it is referenced in <ref
+                  target="#lat_1">the first song of the album</ref>. But listening to the Outro of
+               the song the words "I know the pieces fit" sound aggressive as if the protagonist
+               wants to force the relationship into harmony. However as we learned throughout the
+               song a schism must be overcome in order for the relationship to function.</note>
+         </div>
+         <div type="song" n="6" corresp="#lat_6">
+            <head>6. Parabol</head>
+            <note corresp="#lat_6">This song is a prelude to the song “<ref target="#lat_7"
+                  >Parabola</ref>”. It is lyrically very similar to “<ref target="#lat_7"
+                  >Parabola</ref>” and serves as a more calm opener to the heavier sound of “<ref
+                  target="#lat_7">Parabola</ref>”. The song describes human existence and our own
+               spirit and bodies in an eternal sense. It illustrates the idea that life is just a
+               place to prepare our spirits for some kind of eternal cycle or state of being,
+               whatever that may be.</note>
+            <lg type="verse" n="6.1." xml:id="par_vers1">
+               <l>So familiar and overwhelmingly warm</l>
+               <l>This one, this form I hold now.</l>
+               <l>Embracing you, this reality here,</l>
+               <l>This one, this form I hold now, so</l>
+               <l>Wide eyed and hopeful.</l>
+               <l>Wide eyed and hopefully wild.</l>
+               <l>We barely remember what came before this precious moment,</l>
+               <l>Choosing to be here right now.</l>
+               <l>Hold on, stay inside...</l>
+               <l>This body holding me,</l>
+               <l>reminding me that I am not alone in</l>
+               <l>This body makes me feel eternal.</l>
+               <l>All this pain is an illusion.</l>
+            </lg>
+            <note>The author takes a step back and percieves himself as different from his body -
+               him being just pure awareness. That he is aware of his "familiar" body may imply that
+               the awareness which he identifies as was present in other bodies before. He holds
+               this form just temporarily, looking forward to being released again after the death
+               of the body - remembering again what happened before we were born. He as awareness is
+               choosing to be in the present moment - not concealed by the automated minds chatter
+               consisting of thoughts and emotions. The knowing of him being the awareness - not the
+               body or the mind - let´s him see beyond the suffering of the individual.</note>
+         </div>
+         <div type="song" n="7" corresp="#lat_7">
+            <head>7. Parabola</head>
+            <note corresp="#lat_7">A “parabola” is a U-shaped curve in a quadratic function in which
+               any point has the same distance from a fixed straight line. “Parabola” is a play on
+               the title of the introduction section, titled “Parabol,” which is a play on the word
+               “parable,” or a story with an intended moral lesson. Parables form the foundation for
+               all modern major religions. The song “Parabola” builds on the interlude musically as
+               well as thematically as it tells about the celebration of life, the “holy experience”
+               of birth, and the unlikely opportunity that we all share to be temporarily conscious
+               of each other and the world around us. <ref target="#line_7.3.1.">This song focuses
+                  on the realization through our bodily experience that others share the same
+                  limitations and desires as we do</ref>, and we will all eventually fade back into
+               nothingness, as we were before our births. This realization “of our own mortality”
+               urges us to treasure the life we have, use it to the best of our ability, and ignore
+               base, unnecessary, unfulfuillable desires that detract from the richness of our
+               experience of life.</note>
+            <lg type="verse" n="7.1." xml:id="para_vers1">
+               <l>We barely remember</l>
+               <l>who or what came before this precious moment,</l>
+               <l>We are <sic>Choosing</sic> to be here right now.</l>
+               <l>Hold on, stay inside...</l>
+            </lg>
+            <lg type="pre-chorus" n="7.2." xml:id="para_prechor1">
+               <l>This holy reality,</l>
+               <l>this holy experience.</l>
+               <l>Choosing to be here in...</l>
+            </lg>
+            <lg type="chorus" n="7.3." xml:id="para_chor1">
+               <l xml:id="line_7.3.1.">This body. This body holding me.</l>
+               <l>Be my reminder here that I am not alone in</l>
+               <l>This body, this body holding me,</l>
+               <l>feeling eternal all this pain is an illusion.</l>
+            </lg>
+            <lg type="post-chorus" n="7.4." xml:id="para_postchor">
+               <l>Alive</l>
+            </lg>
+            <lg type="pre-chorus" n="7.5." xml:id="para_prechor2">
+               <l>This holy reality,</l>
+               <l>in this holy experience.</l>
+               <l>Choosing to be here in...</l>
+            </lg>
+            <lg type="chorus" n="7.6." xml:id="para_chor2">
+               <l>This body. This body holding me.</l>
+               <l>Be my reminder here that I am not alone in</l>
+               <l>This body, this body holding me,</l>
+               <l>feeling eternal all this pain is an illusion...</l>
+            </lg>
+            <lg type="bridge" n="7.7." xml:id="para_bridge">
+               <l>Of what it means to be alive</l>
+               <l>Swirling round with this familiar parable.</l>
+               <l>Spinning, weaving round each new experience.</l>
+               <l>Recognize this as a holy gift and</l>
+               <l>celebrate this chance to be alive and breathing</l>
+               <l>chance to be alive and breathing.</l>
+               <note corresp="#para_bridge">The familiar parable may be the life process for life
+                  and death balance each other out. Pure consciousness, which acts as the
+                  protagonist in this song so to speak, experiences this parable again and again and
+                  integrates the experiences of all human beings. Humans in turn should become aware
+                  of their true nature (awareness) and become greatful for their role.</note>
+            </lg>
+            <lg type="outro" n="7.8." xml:id="para_outro">
+               <l>This body holding me reminds me of my own mortality.</l>
+               <l>Embrace this moment. Remember.</l>
+               <l>we are eternal. all this pain is an illusion.</l>
+            </lg>
+         </div>
+         <div type="song" n="8" corresp="#lat_8">
+            <head>8. Ticks &amp; Leeches</head>
+            <note corresp="#lat_8">Off of “<ref target="#def_lat">Lateralus</ref>”, this
+               thinly-veiled allegory denounces record executives and the music industry for taking
+               advantage of artists' effort and sacrifices and in so picking up the theme from "<ref
+                  target="#lat_5">Schism</ref>" in which two parties have two different opinions.
+               All against the background of some rough legal issues with their former record label
+                  "<ref target="#def_VoEn">Volcano Entertainment</ref>" just before recording the
+               album. Because of financial troubles the band attempted to leave the label which
+               resuled in a lenghty lawsuit. Those individuals are compared to parasites for
+               demanding more while giving nothing.</note>
+            <lg type="verse" n="8.1." xml:id="TaL_vers1">
+               <l>Suck and suck.</l>
+               <l>Suckin up all you can</l>
+               <l>suckin up all you can suck.</l>
+               <l>Workin up under my patience like a little tick.</l>
+               <l>Fat little parasite.</l>
+               <l>Suck me dry.</l>
+               <l>My blood is bruised and borrowed.</l>
+               <l>You thieving bastards.</l>
+               <l>You have turned my blood cold and bitter,</l>
+               <l>beat my compassion black and blue.</l>
+            </lg>
+            <lg type="chorus" n="8.2." xml:id="TaL_chorus1">
+               <l>Hope this is what you wanted.</l>
+               <l>Hope this is what you had in mind.</l>
+               <l>Cuz this is what you're getting.</l>
+               <l>I hope you're choking.</l>
+               <l>I hope you choke on this.</l>
+               <l>I hope you're choking.</l>
+               <l>I hope you choke on this.</l>
+               <note corresp="#TaL_chorus1">Maybe the record label - already in financial troubles -
+                  lost the case and artists who signed a contract left them in so comming to a
+                  financial ruin.</note>
+            </lg>
+            <lg type="verse" n="8.3." xml:id="TaL_verse2">
+               <l>Taken all I can taken all I can, we can take.</l>
+               <l>Taken all you can taken you can, we can take.</l>
+               <l>Got nothing left to give to you.</l>
+               <l>Blood suckin parasitic little blood suckin parasitic</l>
+               <l>little blood suckin parasitic little tick</l>
+               <l>Take what you want and then go.</l>
+            </lg>
+            <lg type="bridge" n="8.4." xml:id="TaL_bridge">
+               <l>Suck me dry.</l>
+            </lg>
+            <lg type="chorus" n="8.5." xml:id="TaL_chor2">
+               <l>Is this what you wanted?</l>
+               <l>Is this what you had in mind?</l>
+               <l>Is this what you wanted?</l>
+               <l>Cuz this this is what you're getting.</l>
+               <l>I hope, I hope, I hope you choke.</l>
+            </lg>
+         </div>
+         <div type="song" n="9" corresp="#lat_9">
+            <head>9. Lateralus</head>
+            <note corresp="#lat_9">“Lateralus” is one of the most overtly intricate songs by Tool.
+               The predominant lyrical theme is that over-analysis leads to loss of control, linear
+               structures don’t exist in nature and that we “should embrace the random”. Ironically,
+               the song, as well as the entire album’s, structure was carefully planned; this
+               specific song is based on the <ref target="#def_FiSe">Fibonacci sequence</ref>: The
+               introduction section of the song is 01:12 long (0, 1, 1, 2 are the first four numbers
+               in the sequence). The first verse starts at 97 seconds, which is approximately 1.618
+               minutes – (The Golden Ratio). Each verse is 55 seconds long (11th # in sequence). The
+               syllables in the verses coincide with the sequence, as the first part of the first
+               verse goes 1, 1, 2, 3, 5, 8, 5, 3. The 2nd line “to swing on the spiral” finishes at
+               6:18 which numerically matches 1.618 – (The Golden Ratio). The time signature of the
+               main riff is 9/8 8/8 7/8, 987 is the 17th term in the sequence. So as a sort of
+               double-standard, this song wants you to embrace the random, but “embracing” could be
+               interpreted as such for studying its anomalies, which in turn could be found as over
+               analysis.</note>
+            <lg type="verse" n="9.1." xml:id="lat_vers1">
+               <l met="+/">Black</l>
+               <l met="+/">then</l>
+               <l met="+|+/">white are</l>
+               <l met="+|+|+/">all i see</l>
+               <l met="+|+|+|-|-/">in my infancy.</l>
+               <l met="+|+|+|-|+|+|+|+/">red and yellow then came to be,</l>
+               <l met="+|-|+|+|+/">reaching out to me.</l>
+               <l met="+|+|+/">lets me see.</l>
+               <interp>This verse is a reference to the first two steps in the alchemical Magnum
+                  Opus or ‘great work’ to attain the Philosopher’s Stone. The Magnum Opus has become
+                  a metaphor for many things; from practical chemical processes to spirituality and
+                  philosophy. In the alchemical tradition, Nigredo (black) is the first stage and
+                  Albedo (white) is the second, followed by Citrinitas (yellow) and Rubedo (red).
+                  The word “infancy” works on both literal and figurative levels. Actual human
+                  infants do perceive the world in black and white as their senses begin to develop,
+                  before seeing red as their first primary color. Additionally, the term “infancy”
+                  suggests a metaphor for the progression of human consciousness. Our first
+                  impressions of reality are simplistic, initially tending towards duality (good and
+                  evil, friend and foe etc.), whereas intellectual maturity relies upon
+                  incorporating other elements into our perspective. The syllables in the verses and
+                  the comming pre-choruses conform with the Fibonacci sequence.</interp>
+            </lg>
+            <lg type="pre-chorus" n="9.2." xml:id="lat_prechor">
+               <l met="+|-|+|+|-|+|+|-|+|+|-|+|+/" xml:id="line_9.2.1.">as below, so above and
+                  beyond, I imagine</l>
+               <l met="+|-|+|+|+|+|+|-/">drawn beyond the lines of reason.</l>
+               <l met="+|+|+|-|-/">Push the envelope.</l>
+               <l met="+|+|+/">Watch it bend.</l>
+               <note corresp="#line_9.2.1.">This is a reference to the Hermetism’s Law of
+                  Correspondence, it states that this principle manifests in the three Great Planes
+                  of Existence: the mental plane, physical plane and spiritual plane. This law talks
+                  about the harmony between the Great Planes of Existence, the division of them in
+                  different categories is artificial and arbitrary, in fact, there’s no such
+                  separation.</note>
+            </lg>
+            <lg type="chorus" n="9.3." xml:id="lat_chor1">
+               <l>Over thinking, over analyzing separates the body from the mind.</l>
+               <l>Withering my intuition, missing opportunities and I must</l>
+            </lg>
+            <note corresp="#lat_chor1">Over thinking and over analyzing can lead you to be
+               hopelessly cautious when considering the motions and actions you execute. This seems
+               to be ironical, when one looks at the song´s structure.</note>
+            <lg type="post-chorus" n="9.4." xml:id="lat_postchor1">
+               <l>Feed my will to feel my moment</l>
+               <l>drawing way outside the lines.</l>
+            </lg>
+            <lg type="verse" n="9.5." sameAs="#lat_vers1">
+               <l met="+/">Black</l>
+               <l met="+/">then</l>
+               <l met="+|+/">white are</l>
+               <l met="+|+|+/">all i see</l>
+               <l met="+|+|+|-|-/">in my infancy.</l>
+               <l met="+|+|+|-|+|+|+|+/">red and yellow then came to be,</l>
+               <l met="+|-|+|+|+/">reaching out to me.</l>
+               <l met="+|+|+/">lets me see.</l>
+            </lg>
+            <lg type="verse" n="9.6." xml:id="lat_vers2">
+               <l met="+|+/">there is</l>
+               <l met="+/">so</l>
+               <l met="+/">much</l>
+               <l met="+|+/">more and</l>
+               <l met="+|-|+/">beckons me</l>
+               <l met="+|+|+|+|+/">to look thru to these</l>
+               <l met="+|-|-|+|-|+|-|-/">infinite possibilities.</l>
+            </lg>
+            <lg type="pre-chorus" n="9.7." sameAs="#lat_prechor">
+               <l met="+|-|+|+|-|+|+|-|+|+|-|+|+/">as below, so above and beyond, I imagine</l>
+               <l met="+|-|+|+|+|+|+|-/">drawn beyond the lines of reason.</l>
+               <l met="+|+|+|-|-/">Push the envelope.</l>
+               <l met="+|+|+/">Watch it bend.</l>
+            </lg>
+            <lg type="chorus" n="9.8." xml:id="lat_chor2">
+               <l>Over thinking, over analyzing separates the body from the mind.</l>
+               <l>Withering my intuition leaving opportunities behind.</l>
+            </lg>
+            <lg type="post-chorus" n="9.9." xml:id="lat_postchor2">
+               <l>Feed my will to feel my moment</l>
+               <l>urging me to cross the line.</l>
+               <l>Reaching out to embrace the random.</l>
+               <l>Reaching out to embrace whatever may come.</l>
+            </lg>
+            <lg type="bridge" n="9.10." xml:id="lat_bridge">
+               <l>I embrace my desire to</l>
+               <l>I embrace my desire to</l>
+               <l>feel the rhythm,</l>
+               <l>to feel connected</l>
+               <l>enough to step aside and</l>
+               <l>weep like a widow</l>
+               <l>to feel inspired</l>
+               <l>to fathom the power,</l>
+               <l>to witness the beauty,</l>
+               <l>to bathe in the fountain,</l>
+               <l xml:id="line_9.10.11.">to swing on the spiral</l>
+               <l>to swing on the spiral</l>
+               <l>to swing on the spiral</l>
+               <l>of our divinity and</l>
+               <l>still be a human.</l>
+               <note corresp="#lat_bridge">To stop the thinking process, the protagonist tries to
+                  "step aside" from what he believes he is. From this viewpoint he can have empathy
+                  with himself and so letting pent up emotions by weeping.</note>
+               <note corresp="#line_9.10.11.">The Fibonacci sequence in geometry defines what’s
+                  known as the “golden spiral,” an ever-expanding spiral figure seen frequently in
+                  nature (such as the patterns of seeds in sunflowers or the shell of a nautilus).
+                  These later references to “the spiral” serve as confirmation of the intentional
+                  Fibonacci coding throughout in the song. This also adds on to the theme of
+                  “embracing the random,” as seen throughout the song, by not overthinking and just
+                  following the spiral.</note>
+            </lg>
+            <lg type="outro" n="9.11." xml:id="lat_outro">
+               <l>With my feet upon the ground</l>
+               <l>I move myeslf between the sounds</l>
+               <l>and open wide to suck it in.</l>
+               <l>I feel it move across my skin.</l>
+               <l>I'm reaching up and reaching out.</l>
+               <l>I'm reaching for the random or</l>
+               <l>what ever will bewilder me.</l>
+               <l>what ever will bewilder me.</l>
+               <l>And following our will and wind</l>
+               <l>we may just go where no one's been.</l>
+               <l>We'll ride the spiral to the end</l>
+               <l>and may just go where no one's been.</l>
+               <l>Spiral out. Keep going.</l>
+               <l>Spiral out. Keep going.</l>
+               <l>Spiral out. Keep going.</l>
+               <l>Spiral out. Keep going.</l>
+               <l>Spiral out. Keep going.</l>
+            </lg>
+         </div>
+         <div type="song" n="10" corresp="#lat_10">
+            <head>10. Disposition</head>
+            <lg type="verse" n="10.1." xml:id="disp_vers">
+               <l>mention this to me. mention something, anything..</l>
+               <l>and watch the weather change.</l>
+            </lg>
+
+         </div>
+         <note corresp="#lat_10">This song is about both kinds of realities humans can experience -
+            the psychological and existential reality. Without a certain amount of awareness to our
+            thought-process, we are prone (hence the name of the song "Disposition") to live in a
+            parallel reality, consisting just of thoughts and emotions - the psychological reality.
+            Everything in existence is working out fine - the planets follow their orbit, the sun
+            comes up regulary on time (if it wouldn´t, almost every life on this planet would be
+            gone in 18 hours), our hearts beat just the way they need to and our digestive system
+            makes sure that we are provided with nutrients. And still if we live in a psychological
+            reality where we are mostly occupied with our thoughts and emotions, identified with our
+            body and mind, we would dismiss these things as obvious and ignoring our true nature -
+            the life process inherit in all living things. The desperate need of the intellect for
+            thought feeds this psychological reality if it happens compulsive ("mention this to me.
+            mention something, anything.."). Thoughts create emotion and the other way around.
+            Overemphasising the way we feel at the moment we tend to stay in this loop. The antitode
+            to these compulsions of the mind is to pay attention to what lies beyond the mind and
+            body and observe the everchanging existence ("and watch the weather change").</note>
+         <div type="song" n="11" corresp="#lat_11">
+            <head>11. Reflection</head>
+            <lg type="verse" n="11.1." xml:id="ref_vers1">
+               <l>I find that I can see a light at the end down</l>
+               <l>Beneath my self-indulgent pitiful hole.</l>
+               <l>Defeated</l>
+               <l>I Concede and move closer.</l>
+               <l>I may find comfort here</l>
+               <l>I may find peace within the emptiness.</l>
+               <l>How pitiful.</l>
+               <l>It's calling me.</l>
+               <l>It's calling me.</l>
+               <l>It's calling me.</l>
+               <l>It's calling me.</l>
+            </lg>
+            <note corresp="#ref_vers1">Reflection is the second song of three indicated as connected
+               by the artwork on the back of the sleeve for the album. It consists of the three
+               tracks Disposition, Reflection, and Triad. This song references to the previous one.
+               The protagonist finds himself/herself living in a psychological reality. His/her
+               unconscious mind creates the illusion of an independed and isolated self. The quality
+               of life process is that it wants to be limitless. Unable to break out of this
+               isolated state of mind, the life force inherit in him/her calls the protagonist to
+               his/her true nature.</note>
+            <lg type="verse" n="11.2." xml:id="ref_vers2">
+               <l>And in my darkest moment, fetal and weeping.</l>
+               <l>The moon tells me a secret. My confidant.</l>
+               <l>As full and bright as I am,</l>
+               <l>this light is not my own</l>
+               <l>A million light reflections pass over me</l>
+               <l>It's source is bright and endless.</l>
+               <l>She resuscitates the hopeless</l>
+               <l>Without her we are lifeless satellites dreaming dreams.</l>
+               <l>And as I pull my head out I am without one doubt</l>
+               <l>Don't want to be down here feeding my narcissism</l>
+               <l>I must crucify the ego before it's far too late</l>
+               <l>I pray the light lifts me out</l>
+            </lg>
+            <note corresp="#ref_vers2">Hitting another rock bottom, the protagonist comes in direct
+               contact with his/her life process/source/... and becoming aware of his/her constand
+               need for preserving an illusional sense of self and in so becoming increasingly
+               self-absorbed and narcistic.</note>
+            <lg type="refrain" n="11.3." xml:id="ref_refrain1">
+               <l>before I pine away.</l>
+               <l>before I pine away.</l>
+               <l>before I pine away.</l>
+               <l>before I pine away.</l>
+            </lg>
+            <note corresp="#ref_refrain1">Pining means to lapse into a period of intense depression
+               or melancholy due to one’s longing for or grief over someone or something. </note>
+            <lg type="verse" n="11.4." xml:id="ref_vers3">
+               <l>So crucify the ego before it's far too late</l>
+               <l>To leave behind this place so negative and blind and cynical</l>
+               <l>And you will come to find that we are all one mind</l>
+               <l>Just let the light touch you and let the words spill thorough</l>
+               <l>Just let them pass right through, bringing out our hope and reason.</l>
+            </lg>
+            <lg type="refrain" n="11.5." xml:id="ref_refrain2">
+               <l>before I pine away.</l>
+               <l>before I pine away.</l>
+               <l>before I pine away.</l>
+               <l>before I pine away.</l>
+            </lg>
+         </div>
+      </body>
+   </text>
+</TEI>
